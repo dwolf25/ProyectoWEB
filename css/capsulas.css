@@ -1,0 +1,143 @@
+/*
+Configuración pagina
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100;
+
+
+    background-position: center;
+    margin: 0 0 0 0;
+    font-family: "Oswald", sans-serif;
+    
+}
+
+body{
+    background-image: url('/assets/wallpaper-naturepharma1b.jpg');
+    background-size: cover;
+    background-position: top;
+    
+    
+}
+
+
+
+
+/*
+Configuración cabecero
+*/
+.Cabecero {
+
+    width: 100%;
+    height: 5%;
+    background: forestgreen;
+    display: flex;
+    padding: 5px 5px;
+    position: fixed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    
+    
+    
+}
+
+.texto_cabecero {
+    color: white;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*
+Configuración seccion1
+
+*/
+
+.FORM{
+    width: 100%;
+    height: 100%;
+
+}
+.Contenedor_Padre {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    
+}
+.contenedor_inputs a{
+    margin-top: 20px;
+}
+
+.contenedor_inputs {
+
+    justify-content: center ;
+    align-items: center;
+    width: 35%;
+    height: 80%;
+    background-color: forestgreen;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.contenedor_linea{
+    width:80%;
+    margin: 5px   ;
+    padding: 0 100px;
+        height: 15%;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+
+
+}
+.contenedor_linea label{
+margin: 10px 0;
+    
+}
+
+
+
+#cantidadEnvases{
+    width: 100%;
+    height: 30%;
+    color: forestgreen;
+    border: none;
+    border-radius: 5px;
+}
+
+#boton_continuar{
+   
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(46, 195, 98);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 5px #ffffff;
+    
+}
+
+#boton_continuar:hover{
+    background-color: rgb(46, 195, 98);
+    color: white;
+    box-shadow: none;
+}
+
+
