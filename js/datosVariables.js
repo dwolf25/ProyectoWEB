@@ -31,7 +31,7 @@ function demostracion(e){
     }
     if(e.target.dataset.info.includes('capsula')){
         console.log('hola')
-        window.location.href = "rutas/capsulas.html";
+        window.location.href = "../Cantidad_envase/cantidad_envase.html";
     }
     if(e.target.dataset.info.includes('comprimido')){
        

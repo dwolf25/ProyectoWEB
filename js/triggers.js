@@ -66,8 +66,15 @@ if (botonEnviar) {
             limpiarInputs()
             
             //* Navegar a la siguiente pagina 
-            window.location.href = 'pagina2.html';
+            window.location.href = '/rutas/TipoProducto/tipodeproducto.html';
         
+
+        }
+        else if(e.target.dataset.info.includes('pagina3')){
+            //* guardar datos
+
+            //* Navegar a la siguiente pagina
+            window.location.href = '../Formato_productos/formatoproducto.html';
 
         }
     });
