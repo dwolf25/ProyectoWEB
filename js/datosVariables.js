@@ -5,8 +5,7 @@ const softgel = document.querySelector('#softgel')
 const capsula = document.querySelector('#capsula')
 const viales = document.querySelector('#viales')
 const comprimido = document.querySelector('#comprimido')
-const boton = document.querySelector('#mybutton')
-const botonA = document.querySelector('#boton_enviar')
+
 
 
 //TODO EVENTOS
@@ -14,6 +13,7 @@ if(comprimido) comprimido.addEventListener('click', demostracion)
 if(capsula) capsula.addEventListener('click', demostracion)
 if(softgel) softgel.addEventListener('click', demostracion)
 if(viales) viales.addEventListener('click', demostracion)
+
 
     //* aqui tenemos la función que se ejecuta cuando se recuper los datos del formulario de triggers.js desde el localstorage.
     function mostrarFormulario(){
@@ -40,6 +40,7 @@ function demostracion(e){
     if(e.target.dataset.info.includes('vial')){
         
     }
+    
 }
 
 // function actualizarFormulario(){

@@ -14,12 +14,9 @@ html,
 body {
     height: 100%;
     width: 100;
-
-
     background-position: center;
     margin: 0 0 0 0;
     font-family: "Oswald", sans-serif;
-    
 }
 
 body{
@@ -44,9 +41,7 @@ Configuración cabecero
     display: flex;
     padding: 5px 5px;
     position: fixed;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    
-    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)    
     
 }
 
