@@ -34,6 +34,7 @@ Configuración cabecero
     display: flex;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 1;
     
     
     
@@ -47,73 +48,75 @@ Configuración cabecero
 
 .contenedor_padre{
     width: 100%;
-    height: 250vh;
-    /* background-color: aqua; */
+    height: 150vh;
+
+    background-color: aqua;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 5px   ;
     
     flex-direction: column;
 }
 .contenedor_seccion{
-    width: 50%;
-    
-    height: 35%;
+    width: 100%;
+    height: 100rem;
+    max-height: auto;
     background-color: white;
+    
+    margin: 5px;
+
+}
+.contenedor_estructura{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.contenedor_grupo_info{
+    width: 200vh;
+    height: 20vh;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+    margin: 5px;
+}
+
 
 .imagenes_cards{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
-    ;
+    cursor: pointer;
+    
     
 }
 
-.numero1{
-    height: 25%;
-    border-top-right-radius:5px ;
-    border-top-left-radius: 5px; ;
-
-}
-.numero2{
-  height: 35%;  
-}
-.numero3{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px ;
-}
-
-
-
-
 .titulo{
     color: forestgreen;
-    font-size: 40px;
-    text-decoration: underline;
+    font-size: 2rem;
+    
 }
-
-
-
 
 
 .contenedor_interno{
-    width: 90%;
-    height:100% ;
+    width: 100rem;
+    height:12em    ;
     /* background-color: burlywood; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 .contenedor_cards{
-    width: 40%;
+    width: 10%;
     margin: 1%;
-    height: 60%;
+    height: 100%;
     background-color:white;
     color: forestgreen;
     cursor: pointer;
@@ -121,12 +124,17 @@ Configuración cabecero
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   
+}
+.contenedor_cards:checked{
     border: 2px solid forestgreen
 }
+
 .contenedor_selects{
     width: 100%;
     height: 90%;
+    overflow: hidden;
     /* background-color: beige; */
     display: flex;
     align-items: center;
@@ -137,7 +145,7 @@ Configuración cabecero
 }
 .contenedor_selects select{
     width: 100%;
-    height: 35%;
+    height: 55%;
     border-radius: 8px;
     border: none;
     color:forestgreen;
@@ -176,4 +184,81 @@ Configuración cabecero
     border-radius: 5px;
     color: white;
     text-decoration: none;
+}
+
+/* Seccion de selección de cantidad por envase */
+
+.contenedor_info{
+    width: 90%;
+    height: 50%;
+    background-color: azure;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+.titulo_cantidad_envase{
+    color: forestgreen;
+    font-size: 2rem;
+}
+.contenedor_agrupador{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor_opcion{
+    width: 7%;
+    height: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: 2px forestgreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+.contenedor_opcion:hover{
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.contenedor_opcion label{
+    color: forestgreen;
+    font-size: large;
+    width: 100%;
+    height: 100%; display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+input[type="radio"]:checked + .contenedor_seleccion{
+   background-color: forestgreen;
+   color: white;
+}
+
+.botones_invisibles{
+    display: none;
+}
+
+/* Contenedor para el boton de continuar */
+.contenedor_seccion_boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* seccion de estilos de material bote imagenes */
+.seleccion_imagen:cheked + imagen_opcion{
+    background-color: antiquewhite;
 }

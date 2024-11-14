@@ -1,124 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="diseñoBote.css">
-</head>
-<body>
+    <link rel="stylesheet" href="diseñoBote.css" />
+  </head>
+  <body>
     <header class="Cabecero">
-        <p class="texto_cabecero"> Formulario Rioja Nature Pharma </p>
+      <p class="texto_cabecero">Formulario Rioja Nature Pharma</p>
     </header>
 
     <div class="contenedor_padre">
-        <div class="contenedor_seccion numero1">
-            <h1 class="titulo">Material Bote</h1>
-            <div class="contenedor_interno">
-                <div class="contenedor_cards">
-                    <img src="../../assets/BotePet.jpg" alt="botePet" class="imagenes_cards">
-                </div>
-                <div class="contenedor_cards">
-                    <img src="../../assets/BoteCristal.jpg" alt="boteCristal" class="imagenes_cards">
-                    
-                </div>
-                <div class="contenedor_cards">
-                    <P>OTROS    </P>
-                </div>
-            </div>
+      <div class="contenedor_seccion">
+        <div class="contenedor_estructura">
+          <div class="contenedor_info">
+            <h2 class="titulo_cantidad_envase">Cantidad por envase</h2>
+          </div>
+          <div class="contenedor_info">
+            <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion1"
+                  name="opcion"
+                  value="1"
+                />
+                <label class="contenedor_seleccion" for="opcion1">30</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion2"
+                  name="opcion"
+                  value="2"
+                />
+                <label class="contenedor_seleccion" for="opcion2">60</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion3"
+                  name="opcion"
+                  value="3"
+                />
+                <label class="contenedor_seleccion" for="opcion3">90</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion4"
+                  name="opcion"
+                  value="4"
+                />
+                <label class="contenedor_seleccion" for="opcion4">120</label>
+              </div>
+          </div>
         </div>
-        <div class="contenedor_seccion numero2">
-            <h2 class="titulo">Características</h2>
-            <div class="contenedor_interno interno_2">
-                <div class="contenedor_selects">
-                    <div class="contenedor_label_select">
-                        <label for="Tamaño">Tamaño</label>
-                        <select name="Tamaño" id="Tamaño">
-                            <option value="75">Seleccionar</option>
-                            <option value="75">75</option>
-                            <option value="100">100</option>
-                            <option value="150">150</option>
-                            <option value="200">200</option>
-                            <option value="300">300</option>
-                        </select>
-                    </div>
-                    <div class="contenedor_label_select">
-                        <label for="diametroBoca">Diametro boca</label>
-                    <select name="diametroBoca" id="diametroBoca">
-                    <option value="">Seleccionar</option>
-                    <option value="">38</option>
-                    <option value="">38</option>
-                    <option value="">45</option>                        
-                    </select>
-                    </div>
+      </div>
+      <div class="contenedor_seccion">
+        <div class="contenedor_estructura">
+          <h1 class="titulo">Material Bote</h1>
+          <div class="contenedor_interno">
+            <div class="contenedor_cards">
+                <input type="radio" id="otro_bote" class="botones_invisibles seleccion_imagen">
+                <label for="otro_bote" class="imagen_opcion">
+                  <img src="../../assets/BotePet.jpg" class="imagenes_cards" alt="">
+                </label>
+            </div>
+            <div class="contenedor_cards">
+                <input type="radio" id="pet_bote" class="botones_invisibles seleccion_imagen">
+                <label for="pet_bote" class="imagen_opcion"><img src="../../assets/BoteCristal.jpg" class="imagenes_cards" alt=""></label>
+            </div>
+            <div class="contenedor_cards">
+              <input type="radio" id="otro_bote" class="botones_invisibles seleccion_imagen">
+              <label for="otro_bote" class="imagen_opcion">Otros</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor_seccion">
+        <div class="contenedor_estructura">
+            <!-- Tamaño Tapa -->
+             <div class="contenedor_grupo_info">
+                <div class="contenedor_info">
+                    <h2 class="titulo_cantidad_envase">Tamaño Bote</h2>
+              </div>
+              <div class="contenedor_info" id="contenedor_tamaño_bote">  
+              </div>
+             </div>
+           
+           <!-- Color Tapa -->
+            <div class="contenedor_grupo_info">
+                <div class="contenedor_info">
+                    <h2 class="titulo_cantidad_envase">Color</h2>
+                  </div>
+                  <div class="contenedor_info" id="contenedor_colores">
                     
-                    <div class="contenedor_label_select">
-                        <label for="Color">Color</label>
-                    <select name="Color" id="Color">
-                        <option value="">Seleccionar</option>
-                        <option value="Ambar">Ambar</option>
-                        <option value="Transparente">Transparente</option>
-                    </select>
-                    </div>
-                    
-
-
-                </div>
-                
+                  </div>
 
             </div>
+          
         </div>
-        <div class="contenedor_seccion numero3">
-            <h3 class="titulo">Tapa</h3>
-            <div class="contenedor_interno interno_3">
-                
-                <div class="contenedor_selects">
-                    <div class="contenedor_label_select">
-                        <label for="Tamaño">Tamaño</label>
-                        <select name="Tamaño" id="Tamaño">
-                            <option value="75">Seleccionar</option>
-                            <option value="75">75</option>
-                            <option value="100">100</option>
-                            <option value="150">150</option>
-                            <option value="200">200</option>
-                            <option value="300">300</option>
-                        </select>
-                    </div>
-                    <div class="contenedor_label_select">
-                        <label for="Material">Material</label>
-                    <select name="Material" id="Material">
-                    <option value="">Seleccionar</option>
-                    <option value="Plastico">Plastico</option>
-                    <option value=" Metal">Metal</option>                        
-                    </select>
-                    </div>
-                    
-                    <div class="contenedor_label_select">
-                        <label for="Color">Acabado</label>
-                    <select name="Acabado" id="Acabado">
-                        <option value="">Seleccionar</option>
-                        <option value="Brillo">Brillo</option>
-                        <option value="Mate">Mate</option>
-                        <option value="Metalizado">Metalizado</option>
-                        <option value="UV">UV</option>
-                        <option value="plastificado">Plastificado</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                    </div>
-                    
-
-
-                </div>
+      </div>
+      <div class="contenedor_seccion">
+        <div class="contenedor_estructura">
+          <div class="contenedor_info">
+            <h2 class="titulo_cantidad_envase">Tapa</h2>
+          </div>
+          <div class="contenedor_info">
+            <div class="contenedor_agrupador">
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion1"
+                  name="opcion"
+                  value="1"
+                />
+                <label class="contenedor_seleccion" for="opcion1">30</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion2"
+                  name="opcion"
+                  value="2"
+                />
+                <label class="contenedor_seleccion" for="opcion2">60</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion3"
+                  name="opcion"
+                  value="3"
+                />
+                <label class="contenedor_seleccion" for="opcion3">90</label>
+              </div>
+              <div class="contenedor_opcion">
+                <input
+                  class="botones_invisibles"
+                  type="radio"
+                  id="opcion4"
+                  name="opcion"
+                  value="4"
+                />
+                <label class="contenedor_seleccion" for="opcion4">120</label>
+              </div>
             </div>
-
-            <a href="#" class="boton_continuar" data-info="boton_continuar" >Continuar</a>
-
+          </div>
         </div>
-            
+      </div>
+      <div class="contenedor_seccion_boton">
+        <a href="#" class="boton_continuar" data-info="boton_continuar">Continuar</a>
+       </div>
+
     </div>
-
-
-
-
-</body>
+  </body>
+  <script src="bote.js"></script>
 </html>
