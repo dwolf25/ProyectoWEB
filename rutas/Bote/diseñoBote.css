@@ -17,7 +17,7 @@ body {
     background-position: center;
     margin: 0 0 0 0;
     font-family: "Oswald", sans-serif;
-    background-color: forestgreen;
+    background-color: rgb(245, 244, 244);
     
 }
 /*
@@ -48,9 +48,9 @@ Configuración cabecero
 
 .contenedor_padre{
     width: 100%;
-    height: 150vh;
+    height: auto;
 
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     gap: 5px   ;
     
@@ -58,10 +58,9 @@ Configuración cabecero
 }
 .contenedor_seccion{
     width: 100%;
-    height: 100rem;
-    max-height: auto;
-    background-color: white;
-    
+    height:20rem;
+    max-height:  30rem ;
+    /* background-color: white; */
     margin: 5px;
 
 }
@@ -76,9 +75,9 @@ Configuración cabecero
     justify-content: center;
 }
 .contenedor_grupo_info{
-    width: 200vh;
+    width: 100%;
     height: 20vh;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,13 +104,26 @@ Configuración cabecero
 
 
 .contenedor_interno{
-    width: 100rem;
-    height:12em    ;
+    width: 70%;
+    height:11rem    ;
     /* background-color: burlywood; */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin: 2px;
+}
+.texto_otros{
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+    height: 3rem;
+    min-height: 3rem;
+    max-height: 3rem;
+    border-radius: 3px;
+    border-color: 2px solid forestgreen;
+    font-size: 1.1rem;
+    color: forestgreen;
 }
 .contenedor_cards{
     width: 10%;
@@ -177,13 +189,19 @@ Configuración cabecero
     margin-bottom: 20px;
     width: 120px;
     height: 45px;
-    background-color: forestgreen;
+    background-color: rgb(245, 244, 244);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    color: white;
+    color: forestgreen;
     text-decoration: none;
+    border: 2px solid forestgreen;
+}
+.boton_continuar:hover{
+    background-color: forestgreen;
+    color: white;
+
 }
 
 /* Seccion de selección de cantidad por envase */
@@ -191,7 +209,7 @@ Configuración cabecero
 .contenedor_info{
     width: 90%;
     height: 50%;
-    background-color: azure;
+    /* background-color: azure; */
     margin: 2px;
     display: flex;
     align-items: center;
@@ -212,7 +230,7 @@ Configuración cabecero
     justify-content: center;
 }
 .contenedor_opcion{
-    width: 7%;
+    width: 5%;
     height: 3rem;
     background-color: white;
     border-radius: 5px;
@@ -252,13 +270,90 @@ input[type="radio"]:checked + .contenedor_seleccion{
 
 /* Contenedor para el boton de continuar */
 .contenedor_seccion_boton{
+    width: 100%;
+    height: 10rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
 
-/* seccion de estilos de material bote imagenes */
-.seleccion_imagen:cheked + imagen_opcion{
-    background-color: antiquewhite;
+/* Estilo por defecto de las cartas */
+.contenedor_cards {
+    width: 10%;
+    margin: 1%;
+    height: 100%;
+    background-color: white;
+    color: forestgreen;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Al seleccionar, aplica estilo al contenedor */
+  input[type="radio"]:checked + label.imagen_opcion {
+    border: 3px solid forestgreen; /* Borde en el contenedor */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+ /* Efecto de elevación */
+    border-radius: 5px;
+  }
+ /* aqui agregamos el cambio para las observaciones*/
+
+ /* Inicialmente ocultamos el contenedor */
+/* Contenedor oculto inicialmente */
+#contenedor_otro_texto {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Desaparece con suavidad */
 }
+
+/* Cuando se agrega la clase .mostrar */
+#contenedor_otro_texto.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s; /* Aparece con suavidad */
+}
+
+
+
+/* Transición suave para el contenedor */
+.texto_otros {
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+    height: 3rem;
+    min-height: 3rem;
+    max-height: 3rem;
+    border-radius: 3px;
+    border: 2px solid forestgreen;
+    font-size: 1.1rem;
+    color: forestgreen;
+}
+.texto_otros:focus{
+    outline: none;
+}
+
+  
+  /* Para que funcione en toda la carta, añade padding al label */
+  label.imagen_opcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  /* Imagen dentro del contenedor */
+  .imagenes_cards {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  

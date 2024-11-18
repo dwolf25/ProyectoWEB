@@ -14,11 +14,12 @@
     <div class="contenedor_padre">
       <div class="contenedor_seccion">
         <div class="contenedor_estructura">
-          <div class="contenedor_info">
-            <h2 class="titulo_cantidad_envase">Cantidad por envase</h2>
-          </div>
-          <div class="contenedor_info">
-            <div class="contenedor_opcion">
+          <div class="contenedor_grupo_info">
+            <div class="contenedor_info">
+                <h2 class="titulo_cantidad_envase">Cantidad por envase</h2>
+              </div>
+            <div class="contenedor_info">
+                <div class="contenedor_opcion">
                 <input
                   class="botones_invisibles"
                   type="radio"
@@ -57,8 +58,8 @@
                   value="4"
                 />
                 <label class="contenedor_seleccion" for="opcion4">120</label>
-              </div>
-          </div>
+              </div></div>
+        </div>
         </div>
       </div>
       <div class="contenedor_seccion">
@@ -66,20 +67,22 @@
           <h1 class="titulo">Material Bote</h1>
           <div class="contenedor_interno">
             <div class="contenedor_cards">
-                <input type="radio" id="otro_bote" class="botones_invisibles seleccion_imagen">
-                <label for="otro_bote" class="imagen_opcion">
+                <input type="radio" id="Bote_Pet" class="botones_invisibles seleccion_imagen" name="Bote">
+                <label for="Bote_Pet" class="imagen_opcion">
                   <img src="../../assets/BotePet.jpg" class="imagenes_cards" alt="">
                 </label>
             </div>
             <div class="contenedor_cards">
-                <input type="radio" id="pet_bote" class="botones_invisibles seleccion_imagen">
-                <label for="pet_bote" class="imagen_opcion"><img src="../../assets/BoteCristal.jpg" class="imagenes_cards" alt=""></label>
+                <input type="radio" id="Bote_Cristal" class="botones_invisibles seleccion_imagen" name="Bote">
+                <label for="Bote_Cristal" class="imagen_opcion"><img src="../../assets/BoteCristal.jpg" class="imagenes_cards" alt=""></label>
             </div>
             <div class="contenedor_cards">
-              <input type="radio" id="otro_bote" class="botones_invisibles seleccion_imagen">
-              <label for="otro_bote" class="imagen_opcion">Otros</label>
+              <input type="radio" id="otro_bote" class="botones_invisibles seleccion_imagen" name="Bote">
+              <label for="otro_bote" class="imagen_opcion" id="otro_texto">Otros</label>
             </div>
           </div>
+          <div class="contenedor_interno" id="contenedor_otro_texto">
+            <textarea placeholder="Ingresa otras opciones" name="info_otros" id="info_otros" class="texto_otros"></textarea></div>
         </div>
       </div>
       <div class="contenedor_seccion">
@@ -106,57 +109,7 @@
           
         </div>
       </div>
-      <div class="contenedor_seccion">
-        <div class="contenedor_estructura">
-          <div class="contenedor_info">
-            <h2 class="titulo_cantidad_envase">Tapa</h2>
-          </div>
-          <div class="contenedor_info">
-            <div class="contenedor_agrupador">
-              <div class="contenedor_opcion">
-                <input
-                  class="botones_invisibles"
-                  type="radio"
-                  id="opcion1"
-                  name="opcion"
-                  value="1"
-                />
-                <label class="contenedor_seleccion" for="opcion1">30</label>
-              </div>
-              <div class="contenedor_opcion">
-                <input
-                  class="botones_invisibles"
-                  type="radio"
-                  id="opcion2"
-                  name="opcion"
-                  value="2"
-                />
-                <label class="contenedor_seleccion" for="opcion2">60</label>
-              </div>
-              <div class="contenedor_opcion">
-                <input
-                  class="botones_invisibles"
-                  type="radio"
-                  id="opcion3"
-                  name="opcion"
-                  value="3"
-                />
-                <label class="contenedor_seleccion" for="opcion3">90</label>
-              </div>
-              <div class="contenedor_opcion">
-                <input
-                  class="botones_invisibles"
-                  type="radio"
-                  id="opcion4"
-                  name="opcion"
-                  value="4"
-                />
-                <label class="contenedor_seleccion" for="opcion4">120</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div class="contenedor_seccion_boton">
         <a href="#" class="boton_continuar" data-info="boton_continuar">Continuar</a>
        </div>

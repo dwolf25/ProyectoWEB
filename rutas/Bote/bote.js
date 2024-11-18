@@ -87,3 +87,39 @@ function agregarOpcionesDeTamaño(tamaños) {
 // Ejemplo de uso: llamar a la función con un array de tamaños
 const tamañosBote = ["55", "75", "100", "150", "200","250","300","400","500"];
 agregarOpcionesDeTamaño(tamañosBote);
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const otroBoteInput = document.getElementById('otro_bote');
+  const contenedorOtroTexto = document.getElementById('contenedor_otro_texto');
+
+  const botePetInput = document.getElementById('Bote_Pet');
+  const boteCristalInput = document.getElementById('Bote_Cristal');
+
+  const actualizarContenedorOtroTexto = () => {
+      if (otroBoteInput.checked) {
+          contenedorOtroTexto.classList.add('mostrar');
+          contenedorOtroTexto.style.display = 'flex'; // Cambia a flex cuando se debe mostrar
+      } else {
+          contenedorOtroTexto.classList.remove('mostrar');
+          contenedorOtroTexto.style.display = 'none'; // Vuelve a ocultar el contenedor
+      }
+  };
+
+  otroBoteInput.addEventListener('change', actualizarContenedorOtroTexto);
+  botePetInput.addEventListener('change', () => {
+      contenedorOtroTexto.classList.remove('mostrar');
+      contenedorOtroTexto.style.display = 'none'; // Oculta el contenedor cuando se selecciona otra opción
+  });
+  boteCristalInput.addEventListener('change', () => {
+      contenedorOtroTexto.classList.remove('mostrar');
+      contenedorOtroTexto.style.display = 'none'; // Oculta el contenedor cuando se selecciona otra opción
+  });
+
+  actualizarContenedorOtroTexto();
+});
+
